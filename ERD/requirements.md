@@ -54,4 +54,37 @@
 
 
 # Relationships between Entities
+    Users
+        A user can own multiple properties (if a host).
+        A user can make multiple bookings (if a guest).
+        A user can write multiple reviews.
+    
+    Properties
+        A property belongs to one user (the host).
+        A property can have multiple bookings.
+        A property can have multiple reviews.
+    
+    Bookings
+        A booking belongs to one user (the guest).
+        A booking belongs to one property.
+        A booking can have one payment associated.
+    
+    Payments
+        A payment is associated with one booking.
+        Multiple payments can be made by a user(if a user has multiple bookings).
+        A payment is associated to a specific property.
+    
+    Reviews
+        A review belongs to one user (the reviewer).
+        A review belongs to one property.
+        A review references a single booking.
+
+    Messages
+        A message is associated with one sender.
+        A user can send multiple messages.
+        A recipient can receive multiple messages.
+
+# ER Diagram
+
+        ![ALX-AirBnb-Database drawio](https://github.com/user-attachments/assets/7cfddce0-1de8-43c9-b8f8-8898e464e054)
 
