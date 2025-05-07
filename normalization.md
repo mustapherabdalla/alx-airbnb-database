@@ -28,7 +28,7 @@
     Example: In `Booking`, `start_date` and `end_date` depend on `booking_id` (not just `property_id` or `user_id`).  
     
     
-        3.	Third Normal Form (3NF): Eliminate Transitive Dependencies
+    Third Normal Form (3NF): Eliminate Transitive Dependencies
     Ensure non-key attributes depend only on the primary key, not on other non-key  attributes.  
     
     Checks Applied to my Schema  
