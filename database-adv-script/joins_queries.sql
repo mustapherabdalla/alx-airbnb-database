@@ -9,9 +9,4 @@ ORDER BY p.property_name ASC, r.review_date DESC;  -- Orders by property name (A
 
 SELECT u.*, b.*
 FROM users u
-LEFT JOIN bookings b ON u.user_id = b.user_id
-UNION
-SELECT u.*, b.*
-FROM users u
-RIGHT JOIN bookings b ON u.user_id = b.user_id
-WHERE u.user_id IS NULL;
+FULL OUTER JOIN bookings b ON u.user_id = b.user_id;
