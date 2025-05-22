@@ -4,7 +4,8 @@ INNER JOIN users u ON b.user_id = u.user_id;
 
 SELECT p.*, r.*
 FROM properties p
-LEFT JOIN reviews r ON p.property_id = r.property_id;
+LEFT JOIN reviews r ON p.property_id = r.property_id
+ORDER BY p.property_name ASC, r.review_date DESC;  -- Orders by property name (A-Z) and review date (newest first)
 
 SELECT u.*, b.*
 FROM users u
