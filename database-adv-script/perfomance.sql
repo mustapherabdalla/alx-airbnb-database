@@ -59,7 +59,7 @@ ORDER BY
 
     -- Costly sorting operation on the entire dataset
 
--- Optimized query (performance.sql)
+-- Optimized query with proper filtering using AND
 SELECT 
     b.booking_id,
     b.start_date,
@@ -89,6 +89,8 @@ INNER JOIN
     payments pay ON b.booking_id = pay.booking_id
 WHERE 
     b.start_date >= CURRENT_DATE - INTERVAL '6 months'
+    AND b.status = 'confirmed'
+    AND pay.payment_status = 'completed'
 ORDER BY 
     b.start_date DESC
 LIMIT 1000;
